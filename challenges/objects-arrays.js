@@ -261,3 +261,11 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+let a = graduates.map(ele => ele.university).sort();
+console.log(a);
+
+const b = graduates.map(ele => ele.first_name + " " + ele.email);
+console.log(b);
+
+const c = graduates.filter(ele => ele.university.includes("Uni" || "uni"));
+console.log(c);
