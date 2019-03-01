@@ -33,10 +33,10 @@ function CuboidMaker(attr) {
   this.height = attr.height;
 }
 
-CuboidMaker.prototype.volumeMethod = function() {
+CuboidMaker.prototype.volume = function() {
   return this.length * this.width * this.height;
 };
-CuboidMaker.prototype.surfaceAreaMethod = function() {
+CuboidMaker.prototype.surfaceArea = function() {
   return (
     2 *
     (this.length * this.width +
@@ -51,5 +51,5 @@ const newObj = new CuboidMaker({
   height: 5
 });
 
-console.log(newObj.volumeMethod());
-console.log(newObj.surfaceAreaMethod());
+console.log(newObj.volume());
+console.log(newObj.surfaceArea());
