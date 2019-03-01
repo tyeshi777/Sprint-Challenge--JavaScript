@@ -27,24 +27,23 @@
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
 
-class CuboidMaker {
-  constructor(attr) {
-    this.length = attr.length;
-    this.width = attr.width;
-    this.height = attr.height;
-  }
-  volumeMethod() {
-    return this.length * this.width * this.height;
-  }
-  surfaceAreaMethod() {
-    return (
-      2 *
-      (this.length * this.width +
-        this.length * this.height +
-        this.width * this.height)
-    );
-  }
+function CuboidMaker(attr) {
+  this.length = attr.length;
+  this.width = attr.width;
+  this.height = attr.height;
 }
+
+CuboidMaker.prototype.volumeMethod = function() {
+  return this.length * this.width * this.height;
+};
+CuboidMaker.prototype.surfaceAreaMethod = function() {
+  return (
+    2 *
+    (this.length * this.width +
+      this.length * this.height +
+      this.width * this.height)
+  );
+};
 
 const newObj = new CuboidMaker({
   length: 4,
